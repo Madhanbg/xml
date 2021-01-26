@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signUplayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_signupbg"
+    android:layoutAnimation="@anim/animation_recycler_view"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/registerBackBtn"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/backbtn"
+        app:tint="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Signup"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text="Its great to see you"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <EditText
+                android:id="@+id/registerFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:padding="20dp"
+                android:theme="@style/EditTextTheme" />
+
+            <EditText
+                android:id="@+id/registerEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black"
+                android:hint="Email Address"
+                android:inputType="textPersonName"
+                android:padding="20dp"
+                android:theme="@style/EditTextTheme" />
+
+            <EditText
+                android:id="@+id/registerPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="20dp"
+                android:theme="@style/EditTextTheme" />
+
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black"
+                android:hint="Password"
+                android:inputType="textPassword"
+                app:passwordToggleEnabled="true"
+                android:padding="20dp"
+                android:theme="@style/EditTextTheme" />
+
+            <EditText
+                android:id="@+id/registerRePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black"
+                android:hint="Retype Password"
+                android:inputType="textPassword"
+                android:padding="20dp"
+
+                android:theme="@style/EditTextTheme" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/signUpCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#380C84"
+                    app:buttonTint="#380C84"
+                    app:useMaterialThemeColors="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/loremIpsum"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/registerSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardView"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/login_button"
+        android:onClick="registerSignUp"
+        android:text="Signup"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerSignUp"
+        android:layout_marginTop="9dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/registerBack2Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" Login"
+            android:textColor="@color/purple_500"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-120dp"
+        android:layout_marginBottom="-120dp"
+        android:src="@drawable/signupasset" />
+
+
+</RelativeLayout>
